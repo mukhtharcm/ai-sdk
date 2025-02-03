@@ -199,9 +199,9 @@ export class GoogleGenerativeAILanguageModel implements LanguageModelV1 {
     }
   }
 
-  supportsUrl(url: URL): boolean {
+  supportsUrl = (url) => {
     return this.config.isSupportedUrl(url);
-  }
+}
 
   async doGenerate(
     options: Parameters<LanguageModelV1['doGenerate']>[0],
